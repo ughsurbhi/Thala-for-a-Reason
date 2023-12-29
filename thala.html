@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>THALA</title>
+</head>
+<style>
+    body{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        /* max-width: 500px;
+        margin: auto; */
+        font-family:"Lucida Console", "Courier New", monospace;
+        /* align-items:center; */
+    }
+
+</style>
+
+<body>
+    <div style="text-align:center">
+        <h1 style="color:blue;">THALA FOR A REASON!</h1>
+        <input type="text" id="input" placeholder="Enter a number">
+        <button type="button" class="btn btn-outline-primary" onclick="displayGif()">Submit</button>
+        <div id="gif-container"></div>
+
+        <script>
+            function displayGif() {
+                var input = document.getElementById("input").value;
+                var gifContainer = document.getElementById("gif-container");
+                gifContainer.innerHTML = "";
+
+                if (input === "7") {
+                    gifContainer.innerHTML = '<video width="500px" height="500px" controls="controls" src="bolejokoyal.mp4">'
+                } else {
+                    gifContainer.innerHTML = '<img src="gg_dhoni.gif">';
+                }
+            }
+        </script>
+        </div>
+</body>
+
+</html>
